@@ -4,12 +4,16 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+   
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+     "start": "node server",
+    "postinstall": "ng build --target=production -e ${NODE_ENV:-production} --aot"
   },
+
+  
   "private": true,
   "dependencies": {
     "@angular/common": "^4.0.0",
